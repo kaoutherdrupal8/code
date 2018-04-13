@@ -1,0 +1,48 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_langues
+    - node.type.dossier_de_competence
+    - paragraphs.paragraphs_type.langues
+  module:
+    - entity_reference_revisions
+id: node.dossier_de_competence.field_langues
+field_name: field_langues
+entity_type: node
+bundle: dossier_de_competence
+label: Langues
+description: 'Paragraph type: Langues'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      langues: langues
+    target_bundles_drag_drop:
+      langues:
+        enabled: true
+        weight: 8
+      competences_techniques:
+        weight: 9
+        enabled: false
+      dossier_de_competence_ausy:
+        weight: 10
+        enabled: false
+      experience_professionnelles:
+        weight: 11
+        enabled: false
+      formations_et_diplomes:
+        weight: 12
+        enabled: false
+      paragraph_image:
+        weight: 13
+        enabled: false
+      paragraph_jquery_accordion:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

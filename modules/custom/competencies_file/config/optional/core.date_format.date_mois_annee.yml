@@ -1,0 +1,8 @@
+uuid: 374bbe55-6ad9-4b87-9772-a4f2949f0821
+langcode: fr
+status: true
+dependencies: {  }
+id: date_mois_annee
+label: 'Date mois Annee'
+locked: false
+pattern: m/Y

@@ -1,0 +1,4 @@
+certification_list:
+  title: drupaliens certification
+  route_name: certification_list
+  base_route: entity.user.canonical

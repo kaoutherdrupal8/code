@@ -1,0 +1,21 @@
+uuid: 29fa84f0-ec68-4aed-97b7-6ff5bb7f0b5f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fin_de_la_formation
+    - paragraphs.paragraphs_type.formations_et_diplomes
+  module:
+    - datetime
+id: paragraph.formations_et_diplomes.field_fin_de_la_formation
+field_name: field_fin_de_la_formation
+entity_type: paragraph
+bundle: formations_et_diplomes
+label: 'Fin de la Formation'
+description: 'La date de fin de la formation'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

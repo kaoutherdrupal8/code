@@ -1,0 +1,6 @@
+name: Mon Module File des Actu
+description: Un module qui liste les actu
+type: module
+core: 8.x
+version: 8.x-2.x-dev
+package: custom

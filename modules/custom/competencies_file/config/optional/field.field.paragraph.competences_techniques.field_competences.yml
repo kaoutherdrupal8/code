@@ -1,0 +1,19 @@
+uuid: 9b245564-6706-451f-8a8d-fe9449be6628
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_competences
+    - paragraphs.paragraphs_type.competences_techniques
+id: paragraph.competences_techniques.field_competences
+field_name: field_competences
+entity_type: paragraph
+bundle: competences_techniques
+label: Compétences
+description: 'La compétence qui correspond à la rubrique'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

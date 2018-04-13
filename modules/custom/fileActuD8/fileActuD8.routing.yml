@@ -1,0 +1,7 @@
+fileActuD8.actu_list:
+  path: 'user/{user}/fileActuD8'
+  defaults:
+    _title: 'Tableau des actuality'
+    _form: '\Drupal\fileActuD8\Form\FileActuD8Form'
+  requirements:
+    _permission: 'access content'

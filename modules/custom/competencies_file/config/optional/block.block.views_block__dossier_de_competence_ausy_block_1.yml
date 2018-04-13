@@ -1,0 +1,38 @@
+uuid: 85d354fc-b2ec-4ad1-944e-d496f8cfa045
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.dossier_de_competence_ausy
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bootstrap_child
+id: views_block__dossier_de_competence_ausy_block_1
+theme: bootstrap_child
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:dossier_de_competence_ausy-block_1'
+settings:
+  id: 'views_block:dossier_de_competence_ausy-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: '20'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n"
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      drupaliens: drupaliens
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

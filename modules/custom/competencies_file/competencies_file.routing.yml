@@ -1,0 +1,8 @@
+
+# user.dashboard.tests:
+#   path: '/user/{user}/dashboard/tests-drupal8old'
+#   defaults:
+#     _title: 'Mes tests'
+#     _controller: '\Drupal\competencies_file\Controller\DashboardTestsController::getDashboard'
+#   requirements:
+#     _access: 'TRUE'

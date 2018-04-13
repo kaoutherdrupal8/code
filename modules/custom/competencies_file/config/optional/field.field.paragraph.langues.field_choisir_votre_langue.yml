@@ -1,0 +1,29 @@
+uuid: 23805b86-74d6-4475-a870-0c48551ea1f0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_choisir_votre_langue
+    - paragraphs.paragraphs_type.langues
+    - taxonomy.vocabulary.langues
+id: paragraph.langues.field_choisir_votre_langue
+field_name: field_choisir_votre_langue
+entity_type: paragraph
+bundle: langues
+label: Langue
+description: 'Choisir la langue parmi cette liste'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      langues: langues
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

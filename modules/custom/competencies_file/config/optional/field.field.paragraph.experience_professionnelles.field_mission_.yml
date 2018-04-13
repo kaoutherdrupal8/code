@@ -1,0 +1,19 @@
+uuid: 66fd3b60-ca8d-417a-8bc5-1d09f55496c3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mission_
+    - paragraphs.paragraphs_type.experience_professionnelles
+id: paragraph.experience_professionnelles.field_mission_
+field_name: field_mission_
+entity_type: paragraph
+bundle: experience_professionnelles
+label: Mission
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

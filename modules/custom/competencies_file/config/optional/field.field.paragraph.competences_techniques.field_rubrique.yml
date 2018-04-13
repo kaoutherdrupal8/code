@@ -1,0 +1,19 @@
+uuid: f46d245d-0560-4e27-b0ce-f62f5fbc396a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rubrique
+    - paragraphs.paragraphs_type.competences_techniques
+id: paragraph.competences_techniques.field_rubrique
+field_name: field_rubrique
+entity_type: paragraph
+bundle: competences_techniques
+label: Rubrique
+description: 'Nature de la technologie'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,4 @@
+ID,name,email,firstname,lastname,status,roles
+1,rakesh,rakesh.james@gmail.com,Rackesh,James,1,administrator
+2,james,james.rakesh@gmail.com,Rakesh,James,1,authenticated
+3,dummy,dummy@gmail.com,Dummy,User,1,testuser

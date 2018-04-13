@@ -1,0 +1,5 @@
+drupalienD8_list_tasks_action_button:
+  route_name: drupalien_certification_add
+  title: 'Add a new score'
+  appears_on:
+    - certification_list

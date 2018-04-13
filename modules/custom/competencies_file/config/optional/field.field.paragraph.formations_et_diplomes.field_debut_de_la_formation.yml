@@ -1,0 +1,21 @@
+uuid: c92dbf7c-142b-4766-a348-7d67cc909d5b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_debut_de_la_formation
+    - paragraphs.paragraphs_type.formations_et_diplomes
+  module:
+    - datetime
+id: paragraph.formations_et_diplomes.field_debut_de_la_formation
+field_name: field_debut_de_la_formation
+entity_type: paragraph
+bundle: formations_et_diplomes
+label: 'Début de la Formation'
+description: 'date de début de la formation'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

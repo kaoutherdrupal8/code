@@ -1,0 +1,21 @@
+uuid: a66a2cac-ada4-4055-8578-af0991aca045
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date_de_fin_de_la_mission
+    - paragraphs.paragraphs_type.experience_professionnelles
+  module:
+    - datetime
+id: paragraph.experience_professionnelles.field_date_de_fin_de_la_mission
+field_name: field_date_de_fin_de_la_mission
+entity_type: paragraph
+bundle: experience_professionnelles
+label: ' Fin de la mission'
+description: 'Veuillez saisir la date de fin de la mission'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

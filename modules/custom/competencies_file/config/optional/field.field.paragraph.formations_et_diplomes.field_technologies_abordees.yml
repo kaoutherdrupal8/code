@@ -1,0 +1,19 @@
+uuid: d7752c23-426f-42ab-97f3-c5eff51af556
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_technologies_abordees
+    - paragraphs.paragraphs_type.formations_et_diplomes
+id: paragraph.formations_et_diplomes.field_technologies_abordees
+field_name: field_technologies_abordees
+entity_type: paragraph
+bundle: formations_et_diplomes
+label: 'Technologies Abordées'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

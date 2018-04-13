@@ -1,0 +1,42 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experiences_professionnell
+    - node.type.dossier_de_competence
+    - paragraphs.paragraphs_type.experience_professionnelles
+  module:
+    - entity_reference_revisions
+id: node.dossier_de_competence.field_experiences_professionnell
+field_name: field_experiences_professionnell
+entity_type: node
+bundle: dossier_de_competence
+label: 'Expériences Professionnelles'
+description: 'La liste des Expériences professionnelles des consultants'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      experience_professionnelles: experience_professionnelles
+    target_bundles_drag_drop:
+      experience_professionnelles:
+        enabled: true
+        weight: 6
+      competences_techniques:
+        weight: 7
+        enabled: false
+      dossier_de_competence_ausy:
+        weight: 8
+        enabled: false
+      paragraph_image:
+        weight: 9
+        enabled: false
+      paragraph_jquery_accordion:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

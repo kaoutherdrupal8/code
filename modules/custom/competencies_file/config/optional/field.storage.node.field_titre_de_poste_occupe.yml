@@ -1,0 +1,21 @@
+uuid: 5100b765-604b-4ca1-8033-b3dc3f980e52
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_titre_de_poste_occupe
+field_name: field_titre_de_poste_occupe
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

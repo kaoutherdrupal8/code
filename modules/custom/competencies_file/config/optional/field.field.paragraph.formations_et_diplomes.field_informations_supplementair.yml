@@ -1,0 +1,19 @@
+uuid: 7c047d7a-fc1d-4a49-bf0c-91e960078418
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_informations_supplementair
+    - paragraphs.paragraphs_type.formations_et_diplomes
+id: paragraph.formations_et_diplomes.field_informations_supplementair
+field_name: field_informations_supplementair
+entity_type: paragraph
+bundle: formations_et_diplomes
+label: 'Informations supplémentaires'
+description: 'Le consultant va saisir toutes les informations supplémentaires sur la formation courante'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ * - profile_print : A Button to print the page and call css media print
+ *
+ * @see template_preprocess_user()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('bootstrap_child/user-profile-print') }}
+
+<div id="print_logo"></div>
+<div id="{{ profile_print.id }}-container">
+	<a id="{{ profile_print.id }}-btn" href="#" class="btn btn-primary" onclick="window.print()">{{ profile_print.btn_text }}</a>
+</div>
+<article id="{{ profile_print.id }}-info" {{ attributes }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</article>
+
+

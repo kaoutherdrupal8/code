@@ -1,0 +1,39 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competences_techniques
+    - node.type.dossier_de_competence
+    - paragraphs.paragraphs_type.competences_techniques
+  module:
+    - entity_reference_revisions
+id: node.dossier_de_competence.field_competences_techniques
+field_name: field_competences_techniques
+entity_type: node
+bundle: dossier_de_competence
+label: 'Compétences Techniques'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      competences_techniques: competences_techniques
+    target_bundles_drag_drop:
+      competences_techniques:
+        enabled: true
+        weight: 5
+      dossier_de_competence_ausy:
+        weight: 6
+        enabled: false
+      paragraph_image:
+        weight: 7
+        enabled: false
+      paragraph_jquery_accordion:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

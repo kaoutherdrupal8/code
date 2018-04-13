@@ -1,0 +1,23 @@
+uuid: ba38a97e-ca44-4b6d-813e-5e297b32ee5e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_niveau
+    - paragraphs.paragraphs_type.langues
+  module:
+    - options
+id: paragraph.langues.field_niveau
+field_name: field_niveau
+entity_type: paragraph
+bundle: langues
+label: Niveau
+description: 'Le consultant peut saisir le niveau d''apprentissage de la langue'
+required: false
+translatable: false
+default_value:
+  -
+    value: Débutant
+default_value_callback: ''
+settings: {  }
+field_type: list_string

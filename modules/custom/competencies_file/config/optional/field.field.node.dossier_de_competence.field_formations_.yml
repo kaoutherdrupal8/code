@@ -1,0 +1,45 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_formations_
+    - node.type.dossier_de_competence
+    - paragraphs.paragraphs_type.formations_et_diplomes
+  module:
+    - entity_reference_revisions
+id: node.dossier_de_competence.field_formations_
+field_name: field_formations_
+entity_type: node
+bundle: dossier_de_competence
+label: 'Formations et Diplomes'
+description: 'Types de Paragraphe: Formations et diplomes'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      formations_et_diplomes: formations_et_diplomes
+    target_bundles_drag_drop:
+      formations_et_diplomes:
+        enabled: true
+        weight: 7
+      competences_techniques:
+        weight: 8
+        enabled: false
+      dossier_de_competence_ausy:
+        weight: 9
+        enabled: false
+      experience_professionnelles:
+        weight: 10
+        enabled: false
+      paragraph_image:
+        weight: 11
+        enabled: false
+      paragraph_jquery_accordion:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

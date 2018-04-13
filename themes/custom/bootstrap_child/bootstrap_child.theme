@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+/*function hook_preprocess_field__user__field_account(&$vars)
+{
+  foreach(array_keys($vars['items']) as $delta)
+  {
+    $vars['items'][$delta]['attributes']->setAttribute('class', 'dossier_competence');
+  }
+}*/
+use Drupal\user\Entity\User;
+
+function bootstrap_child_preprocess_user(&$variables) {
+	//kint($variables['elements']);
+	/*recupérer id du current user*/
+	//$user_id =  \Drupal::currentUser()->getAccountName();
+	
+	/*kint($user_id);
+	kint($variables);*/
+	//code mike:
+
+	$ids = \Drupal::entityQuery('user')
+    //->condition('status', 1)
+    ->condition('roles', 'drupaliens')
+    //->range(0, 5)
+    ->sort('name', 'ASC')
+    ->execute();
+    $users = User::loadMultiple($ids);
+    kint($users);
+
+  // $id = \Drupal::entityTypeManager()->getStorage('user')->getQuery();
+  // //kint($id )
+  // $id->condition('roles','Drupalien');
+  // $ids = $id->execute();
+  // $users = User::loadMultiple($ids);
+ 
+
+  // if (!in_array('Drupalien', $userRoles)){
+
+  // }
+
+
+  $rows = [];
+    foreach($users as $user) {
+        $rows[] = [$user->get('name')->value, $user->get('mail')->value];
+    }
+  //kint( $user);
+  
+
+
+
+
+	$variables['user'] = $variables['elements']['#user'];
+	kint($variables['user']);
+	die();
+	$variables['profile_print']['id'] = 'user-profile-print';
+	$variables['profile_print']['btn_text'] = t('Imprimer');
+
+}

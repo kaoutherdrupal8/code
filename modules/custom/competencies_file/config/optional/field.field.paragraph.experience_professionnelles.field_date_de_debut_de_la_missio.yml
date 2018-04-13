@@ -1,0 +1,21 @@
+uuid: 6fa827b3-3dfb-412e-afce-5e8136d0d32c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date_de_debut_de_la_missio
+    - paragraphs.paragraphs_type.experience_professionnelles
+  module:
+    - datetime
+id: paragraph.experience_professionnelles.field_date_de_debut_de_la_missio
+field_name: field_date_de_debut_de_la_missio
+entity_type: paragraph
+bundle: experience_professionnelles
+label: ' Début de la mission'
+description: 'Veuillez saisir la date de début de ta mission'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,18 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titre_de_poste_occupe
+    - node.type.dossier_de_competence
+id: node.dossier_de_competence.field_titre_de_poste_occupe
+field_name: field_titre_de_poste_occupe
+entity_type: node
+bundle: dossier_de_competence
+label: 'Titre de Poste Occupé'
+description: 'Le titre de poste du consultant'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

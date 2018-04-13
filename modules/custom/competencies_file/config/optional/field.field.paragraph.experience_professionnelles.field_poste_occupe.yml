@@ -1,0 +1,19 @@
+uuid: f2334907-cf49-499d-9920-7eb67e8cf398
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_poste_occupe
+    - paragraphs.paragraphs_type.experience_professionnelles
+id: paragraph.experience_professionnelles.field_poste_occupe
+field_name: field_poste_occupe
+entity_type: paragraph
+bundle: experience_professionnelles
+label: 'Poste Actuel'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

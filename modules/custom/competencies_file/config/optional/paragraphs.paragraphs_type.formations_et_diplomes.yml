@@ -1,0 +1,9 @@
+uuid: d3030cc8-e238-42f0-9739-081755f30fd3
+langcode: fr
+status: true
+dependencies: {  }
+id: formations_et_diplomes
+label: 'Formations et Diplomes'
+icon_uuid: null
+description: 'Le consultant vas nous lister les formations et les diplômes qu''il a effectué'
+behavior_plugins: {  }

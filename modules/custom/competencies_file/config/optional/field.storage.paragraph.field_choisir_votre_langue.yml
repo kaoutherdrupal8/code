@@ -1,0 +1,20 @@
+uuid: d2936b7e-0a1d-4a31-af37-fbb8fae16b49
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_choisir_votre_langue
+field_name: field_choisir_votre_langue
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

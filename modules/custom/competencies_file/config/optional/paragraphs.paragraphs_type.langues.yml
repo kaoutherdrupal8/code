@@ -1,0 +1,9 @@
+uuid: d5477f53-a4b6-48ac-b652-4ebc7ab1d799
+langcode: fr
+status: true
+dependencies: {  }
+id: langues
+label: Langues
+icon_uuid: null
+description: 'Le consultant va saisir les langues qui les maîtrisent et le niveau de difficulté'
+behavior_plugins: {  }

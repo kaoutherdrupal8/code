@@ -1,0 +1,20 @@
+uuid: 62a64046-5779-4142-b32d-171cef0f2ef9
+langcode: fr
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_fin_de_la_formation
+field_name: field_fin_de_la_formation
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

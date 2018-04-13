@@ -1,0 +1,4 @@
+fileActuD8.actu_list:
+  title: drupaliens actu
+  route_name: fileActuD8.actu_list
+  base_route: entity.user.canonical

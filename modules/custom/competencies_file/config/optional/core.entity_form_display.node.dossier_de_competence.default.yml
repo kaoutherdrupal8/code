@@ -1,0 +1,106 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.dossier_de_competence.field_competences_techniques
+    - field.field.node.dossier_de_competence.field_experiences_professionnell
+    - field.field.node.dossier_de_competence.field_formations_
+    - field.field.node.dossier_de_competence.field_langues
+    - field.field.node.dossier_de_competence.field_nombre_d_annees_d_experien
+    - field.field.node.dossier_de_competence.field_titre_de_poste_occupe
+    - node.type.dossier_de_competence
+  module:
+    - paragraphs
+id: node.dossier_de_competence.default
+targetEntityType: node
+bundle: dossier_de_competence
+mode: default
+content:
+  field_competences_techniques:
+    type: paragraphs
+    weight: 3
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: competences_techniques
+    third_party_settings: {  }
+    region: content
+  field_experiences_professionnell:
+    type: paragraphs
+    weight: 4
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: experience_professionnelles
+    third_party_settings: {  }
+    region: content
+  field_formations_:
+    type: paragraphs
+    weight: 5
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: preview
+      autocollapse: all
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: formations_et_diplomes
+    third_party_settings: {  }
+    region: content
+  field_langues:
+    type: paragraphs
+    weight: 6
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: langues
+    third_party_settings: {  }
+    region: content
+  field_nombre_d_annees_d_experien:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_titre_de_poste_occupe:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Dossier de Compétences - Nom Prénom'
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

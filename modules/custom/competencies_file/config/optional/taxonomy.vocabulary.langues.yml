@@ -1,0 +1,9 @@
+uuid: 4f7c0530-d692-4b12-a003-f6d40ad18801
+langcode: fr
+status: true
+dependencies: {  }
+name: Langues
+vid: langues
+description: 'La liste des langues'
+hierarchy: 0
+weight: 0

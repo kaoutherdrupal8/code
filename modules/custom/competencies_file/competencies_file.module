@@ -1,0 +1,136 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function competencies_file_help($route_name, RouteMatchInterface $route_match){
+  switch ($route_name) {
+    case 'help.page.competencies_file':
+      $output = '';
+      $output .= '<h3>'.t('About').'</h3>';
+      $output .= '<p>'.t('Please send help').'</p>';
+
+      return $output;
+  }
+}
+
+
+
+/*
+function hook_ENTITY_TYPE_create()
+Acts when creating a new entity of a specific type.
+This hook runs after a new entity object has just been instantiated.
+
+https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Entity%21entity.api.php/function/hook_entity_create/8.2.x
+*/
+
+/*
+function hook_ENTITY_TYPE_insert
+Respond to creation of a new entity of a particular type.
+This hook runs once the entity has been stored. Note that hook implementations may not alter the stored entity data.
+
+https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Entity%21entity.api.php/function/hook_ENTITY_TYPE_insert/8.2.x
+*/
+
+use Drupal\node\Entity\NodeType;
+use Drupal\node\Entity\Node;
+use Drupal\paragraphs\Entity\Paragraph;
+
+function competencies_file_user_insert($entity){
+	// On créé certaines variables de config
+	// (cf. competencies_file.config.yml)
+	$config = \Drupal::config('competencies_file.config')->get('hook_entity_type_insert');
+  $role = $config['role'];
+  $contentType = $config['content_type'];
+  $jobTitle = $config['job_title'];
+  $contentTitle = $config['content_title'];
+  $userId = $entity->id();
+
+	// On vérifie que l'utilisateur possède bien le rôle drupalien
+	if (in_array($role, $entity->getRoles())) {
+
+		// On vérifie que le type de contenu "Dossier de compétences" existe bien
+		if (NodeType::load($contentType)  != null) {
+
+			// En premier, on créé les contenus Paragraphs,
+			// qui seront ensuite liés au contenu Dossier de compétences.
+			// Et on retourne la valeur à insérer dans le contenu
+			$paraFormattedValue = createParagraph($userId);
+
+			// Puis on créé le contenu Dossier de compétences
+      $node = Node::create([
+      	'type'=> $contentType,
+      	'title' => $contentTitle,
+      	'uid' => $userId,
+      	'field_titre_de_poste_occupe' => $jobTitle,
+      	'field_competences_techniques' => $paraFormattedValue
+      ]);
+    	$node->save();
+		}
+	}
+}
+
+function createParagraph($userId){
+
+	$config = \Drupal::config('competencies_file.config');
+	$paraFieldName = $config->get('hook_entity_type_insert.paragraph_type');
+	$configParas = $config->get($paraFieldName);
+	$paraFormattedValue = [];
+
+	foreach ($configParas as $configPara) {
+
+	  $paragraph = Paragraph::create([
+	      'type' => $paraFieldName,
+	      'uid' => [
+	          'target_id' => $userId
+	      ],
+	      'field_rubrique' => [
+	          'value' => $configPara['field_rubrique']
+	      ],
+	      'field_competences' => [
+	          'value' => $configPara['field_competences']
+	      ],
+	  ]);
+	  $paragraph->save();
+	  $paraFormattedValue[] = array(
+      'target_id' => $paragraph->id(),
+      'target_revision_id' => $paragraph->getRevisionId(),
+	  );
+	}
+
+	return $paraFormattedValue;
+}
+
+/*function competencies_file_preprocess_node(&$variables){
+	kint($variables);
+}*/
+
+       
+
+/*
+
+// Utile pour afficher les valeurs de certains champs d'un contenu déjà créer
+// S'utilise sur la page d'un noeud en particulier
+function competencies_file_node_load(array $entities, $entity_type_id){
+
+  $field = $entities[1]->get('field_competencies_file_skill')->getValue();
+  $ids = [];
+  foreach ($field as $d){
+      $ids[] = $d['target_id'];
+  }
+	
+	$paras = Paragraph::loadMultiple($ids);
+	foreach ($paras as $para) {
+		kint($para->get('id')->getValue());
+		kint($para->get('field_skill_section')->getValue());
+		kint($para->get('field_skill_competences')->getValue());
+		kint($para->get('uid')->getValue());
+	}
+
+	die();
+
+}
+
+*/

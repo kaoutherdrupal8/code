@@ -1,0 +1,95 @@
+@media print
+{
+  *{
+		background-color:red;
+	}
+	#expriences-professionnelles{
+		color:red;
+	}
+  .page-header,
+	.region-header,
+	.region-footer,
+	.region-sidebar-second,
+	.field--name-field-responsable-ingenieur,
+	.field--name-field-responsable-commerciale{
+		display:none;
+		
+	}
+
+    #user-profile-print-container{
+    	display:none;
+    }
+
+	/*#print_logo{
+		background-image: url('../images/logo_ausy.png');
+	    background-repeat: no-repeat;
+		height:50px;
+	}*/
+	#print_logo:before{
+		content: url('../images/logo_ausy.png');
+		/*height:50px;*/
+    top:100px;
+    left:10px;
+    position:relative;
+	}
+    
+    #user-profile-print-info:before{
+    	content:"Dossier de Compétences";
+      position: inherit;
+      top:400px;
+      left:200px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2em;
+      text-align: center;
+      font-family: 'Arial';
+    }
+    /*faire descendre le last-name*/
+    .field--name-field-last-name{
+    
+      position: relative;
+      top:900px;
+      left:180px;
+      text-align: right;
+      font-weight: normal;
+      font-size: 2em;
+      text-align: center;
+      font-family: 'Arial';
+       
+    }
+     /*position first name*/
+    .field--name-field-first{
+      position: relative;
+      top:940px;
+      left:50px;
+      text-align: right;
+      font-weight: normal;
+      font-size: 2em;
+      text-align: center;
+      font-family: 'Arial';
+
+    }
+    /*Faire ouvrir tous les accordions*/
+   .accordion-content{
+   		 display: block !important;
+   }
+   /*désactiver le boutton imprimer*/
+  #user-profile-print-btn{
+  	display:none;
+  }
+  /*Faire un saut de page avant page-break-before*/
+  .field--name-field-dossier-de-competence{ 
+  	display: block; 
+  	page-break-before: always; 
+  	font-family: Arial, serif;
+  }
+  /*dimenssion de la page d'impression*/
+  /*.dialog-off-canvas-main-canvas{
+    height: 900px;
+    width: 900px;*/
+    /*background-color: blue;*/
+    /*columns: 1;
+    column-width: 100px;*/
+    
+  /*}*/
+}

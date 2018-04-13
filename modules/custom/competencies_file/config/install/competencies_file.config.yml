@@ -1,0 +1,36 @@
+hook_install:
+  vocabulary: 'langues'
+hook_entity_type_insert:
+  role: 'drupaliens'
+  paragraph_type: 'competences_techniques'
+  content_type: 'dossier_de_competence'
+  content_title: 'Dossier de compétences - Nom Prénom'
+  job_title: 'Développeur Drupal 8'
+competences_techniques:
+  1:
+    field_rubrique: "Méthodologies"
+    field_competences: "Agile/Scrum"
+  2:
+    field_rubrique: "Modélisation"
+    field_competences: "Merise, UML"
+  3:
+    field_rubrique: "Langages Informatiques"
+    field_competences: "Php5, Php7, JavaScript, Html5, Css3, jQuery"
+  4:
+    field_rubrique: "Librairies CSS & JS"
+    field_competences: "Bootstrap, Materialize, jQuery"
+  5:
+    field_rubrique: "Frameworks"
+    field_competences: "Laravel5, Symfony2, AngularJS"
+  6:
+    field_rubrique: "CMS/CMF"
+    field_competences: "Wordpress, Drupal7, Drupal8"
+  7:
+    field_rubrique: "Outils de développement"
+    field_competences: "SublimeText, Git, Trello, Platform, Jira, Redmine, Cmder"
+  8:
+    field_rubrique: "SGBD"
+    field_competences: "MySql"
+  9:
+    field_rubrique: "Systèmes"
+    field_competences: "Mac OS, Windows, Ubuntu"

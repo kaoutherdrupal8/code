@@ -1,0 +1,36 @@
+certification_list:
+  path: 'user/{user}/drupalienD8'
+  defaults:
+    _title: 'Tableau des certications'
+    _form: '\Drupal\drupalienD8\Form\drupalienD8Form'
+  requirements:
+    _permission: 'access content'
+
+drupalien_certification_add:
+  path: 'content/drupalienD8/add'
+  defaults:
+    _title: 'Ajouter un nouveau score'
+    _form: '\Drupal\drupalienD8\Form\InsertionTableDrupalienD8'
+  requirements:
+    _permission: 'access content'
+
+certification_drupalien_D8_edit:
+  path: 'drupalienD8/form/edit/{id}'
+  defaults:
+    _title: 'Modification du score'
+    _form: '\Drupal\drupalienD8\Form\drupalienD8_edit'
+  requirements:
+    _permission: 'access content'
+
+certification_drupalien_D8_delete:
+  path: 'drupalienD8/form/delete/{id}'
+  defaults:
+    _title: 'Supression du score'
+    _form: '\Drupal\drupalienD8\Form\drupalienD8_delete'
+  requirements:
+    _permission: 'access content'
+
+
+
+
+  

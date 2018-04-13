@@ -1,0 +1,19 @@
+uuid: 4f8ced83-6ba7-4ee7-9521-83ae7d96ca79
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_entreprise
+    - paragraphs.paragraphs_type.experience_professionnelles
+id: paragraph.experience_professionnelles.field_entreprise
+field_name: field_entreprise
+entity_type: paragraph
+bundle: experience_professionnelles
+label: Entreprise
+description: 'Saisir le nom de l''entreprise ou le consultant a fait sa mission'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

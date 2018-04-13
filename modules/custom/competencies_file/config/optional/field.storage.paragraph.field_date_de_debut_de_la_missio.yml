@@ -1,0 +1,20 @@
+uuid: dde76f3a-e654-4145-9f6b-fe0d5b19e238
+langcode: fr
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_date_de_debut_de_la_missio
+field_name: field_date_de_debut_de_la_missio
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

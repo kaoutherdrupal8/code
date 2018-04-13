@@ -1,0 +1,19 @@
+uuid: 58d72a2b-058f-4cd3-9cb1-a8a9f6738944
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_environnement_technique
+    - paragraphs.paragraphs_type.experience_professionnelles
+id: paragraph.experience_professionnelles.field_environnement_technique
+field_name: field_environnement_technique
+entity_type: paragraph
+bundle: experience_professionnelles
+label: 'Environnement Technique'
+description: 'Saisir l''environnement technique que le consultant a utilisé'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

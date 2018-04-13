@@ -1,0 +1,74 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.dossier_de_competence.field_competences_techniques
+    - field.field.node.dossier_de_competence.field_experiences_professionnell
+    - field.field.node.dossier_de_competence.field_formations_
+    - field.field.node.dossier_de_competence.field_langues
+    - field.field.node.dossier_de_competence.field_nombre_d_annees_d_experien
+    - field.field.node.dossier_de_competence.field_titre_de_poste_occupe
+    - node.type.dossier_de_competence
+  module:
+    - entity_reference_revisions
+    - user
+id: node.dossier_de_competence.default
+targetEntityType: node
+bundle: dossier_de_competence
+mode: default
+content:
+  field_competences_techniques:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_experiences_professionnell:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_formations_:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_langues:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_nombre_d_annees_d_experien:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_titre_de_poste_occupe:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
+  links: true

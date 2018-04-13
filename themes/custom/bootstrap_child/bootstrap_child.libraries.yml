@@ -1,0 +1,11 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+
+user-profile-print:
+  css:
+    theme:
+      css/test.css: { }
+      css/print.css: { media : print }
+      
